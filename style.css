@@ -1,0 +1,64 @@
+/* 1. REMOVE TOP GAP & CENTER CONTENT */
+.stAppViewContainer {
+    padding-top: 0 !important;
+}
+
+[data-testid="stMainViewContainer"] > section > div {
+    padding-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center;     /* Centers horizontally */
+    min-height: 100vh;       /* Makes sure it takes full screen height */
+}
+
+/* 2. BACKGROUND & FONT */
+.stApp {
+    background: -webkit-linear-gradient(135deg, #70a87b, #95d35c, #7de979);
+    font-family: 'Nunito', sans-serif !important;
+}
+
+/* 3. HERO TITLES (Fixed centering and spacing) */
+h1 {
+    color: #f1c40f !important; /* Brighter yellow for visibility */
+    font-weight: 700 !important;
+    font-size: 5rem !important; /* Larger for 'Senior' feel */
+    margin: 0 !important;
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.stMarkdown p {
+    color: #087a08 !important; /* Cyan for the sub-text */
+    font-size: 1.5rem !important;
+    margin-bottom: 2rem !important;
+    text-align: justify !important;
+    margin-left: 10%;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+/* 4. BUTTON CENTERING & GLASSMORPHISM */
+div.stButton {
+    display: flex;
+    justify-content: center;
+}
+
+div.stButton > button {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(15px) !important;
+    border-radius: 50px !important; /* More modern pill shape */
+    padding: 15px 50px !important;
+    font-size: 1.2rem !important;
+    transition: all 0.4s ease !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+}
+
+div.stButton > button:hover {
+    background: #daf106 !important;
+    color: #0f2027 !important;
+    border: 1px solid #ecde0f !important;
+    transform: scale(1.05);
+    font-weight: bold;
+}
